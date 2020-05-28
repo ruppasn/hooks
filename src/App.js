@@ -1,9 +1,15 @@
 import React from 'react';
-import Parent from './hooks/Parent';
+import './App.css';
+import { Route, BrowserRouter } from 'react-router-dom'
+import routers from './routers'
 
 function App() {
 
-  return <Parent />
+  return <div className='app'>
+    <BrowserRouter>
+        <Route path="/" component={routers} />
+      </BrowserRouter>
+  </div>
 }
 
 export default App;
